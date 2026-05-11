@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fuplc"
+version = "0.1.0"
+description = "Industrial Control System Security Assessment Framework"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "GPL-3.0-or-later" }
+authors = [ { name = "fuplc" } ]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Topic :: Security :: Network Security",
+]
+
+[project.scripts]
+fuplc = "cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cli"]
